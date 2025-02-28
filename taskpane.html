@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PowerPoint Compare Add-in</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <script src="taskpane.js"></script>
+</head>
+<body>
+    <h1>PowerPoint Text Comparator</h1>
+    
+    <label for="originalFile">Select Original PowerPoint:</label>
+    <input type="file" id="originalFile" accept=".pptx"><br><br>
+    
+    <label for="workingFile">Select Working PowerPoint:</label>
+    <input type="file" id="workingFile" accept=".pptx"><br><br>
+
+    <button onclick="comparePPT()">Compare Presentations</button>
+
+    <p id="result"></p>
+</body>
+</html>

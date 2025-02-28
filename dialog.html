@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comparison Result</title>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <script>
+        Office.onReady(() => {
+            Office.context.ui.messageParent("Dialog Ready");
+        });
+
+        function receiveMessage(arg) {
+            document.getElementById("message").innerText = arg.message;
+        }
+    </script>
+</head>
+<body>
+    <h2>Comparison Result</h2>
+    <p id="message">Waiting for data...</p>
+</body>
+</html>
