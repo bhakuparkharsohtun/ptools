@@ -18,12 +18,13 @@
 
   <Hosts>
     <Host Name="Presentation"/>
-  </Hosts>
+  </Hosts>  
 
   <DefaultSettings>
     <!-- Corrected SourceLocation URL -->
     <SourceLocation DefaultValue="https://bhakuparkharsohtun.github.io/ptools/taskpane.html"/>
   </DefaultSettings>
 
-   <Permissions>ReadWriteDocument</Permissions>
+  <Permissions>ReadWriteDocument</Permissions>
+
 </OfficeApp>

@@ -105,18 +105,23 @@ async function parsePPTText(arrayBuffer) {
 }
 
 function showDialog(message) {
-    Office.context.ui.displayDialogAsync("https://github.com/bhakuparkharsohtun/ptools/blob/main/dialog.html", 
-        { height: 30, width: 40 }, function (asyncResult) {
-            if (asyncResult.status === Office.AsyncResultStatus.Succeeded) {
-                let dialog = asyncResult.value;
-                dialog.addEventHandler(Office.EventType.DialogMessageReceived, function (arg) {
-                    console.log("Dialog message:", arg.message);
-                });
+    let url = "https://bhakuparkharsohtun.github.io/ptools/dialog.html"; // Use GitHub Pages URL
 
-                // Send the comparison result to the dialog
+    Office.context.ui.displayDialogAsync(url, { height: 30, width: 40 }, function (asyncResult) {
+        if (asyncResult.status === Office.AsyncResultStatus.Succeeded) {
+            let dialog = asyncResult.value;
+            
+            // Listen for messages from dialog
+            dialog.addEventHandler(Office.EventType.DialogMessageReceived, function (arg) {
+                console.log("Dialog message:", arg.message);
+            });
+
+            // Allow some time before sending message
+            setTimeout(() => {
                 dialog.messageChild(message);
-            } else {
-                console.error("Failed to open dialog:", asyncResult.error.message);
-            }
-        });
+            }, 1000);
+        } else {
+            console.error("Failed to open dialog:", asyncResult.error.message);
+        }
+    });
 }
