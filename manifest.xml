@@ -8,15 +8,21 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Static PowerPoint Add-in"/>
   <Description DefaultValue="A simple static PowerPoint add-in"/>
-  <IconUrl DefaultValue="https://github.com/bhakuparkharsohtun/ptools/blob/main/assets/icon-32.pngg"/>
-  <HighResolutionIconUrl DefaultValue="https://github.com/bhakuparkharsohtun/ptools/blob/main/assets/icon-64.png"/>
-  <SupportUrl DefaultValue="https://github.com/bhakuparkharsohtun/ptools/"/>  
+  
+  <!-- Corrected Icon URLs -->
+  <IconUrl DefaultValue="https://raw.githubusercontent.com/bhakuparkharsohtun/ptools/main/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://raw.githubusercontent.com/bhakuparkharsohtun/ptools/main/assets/icon-64.png"/>
+  
+  <!-- Corrected Support URL -->
+  <SupportUrl DefaultValue="https://bhakuparkharsohtun.github.io/ptools/"/>  
+
   <Hosts>
     <Host Name="Presentation"/>
   </Hosts>
 
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://github.com/bhakuparkharsohtun/ptools/blob/main/taskpane.html"/>
+    <!-- Corrected SourceLocation URL -->
+    <SourceLocation DefaultValue="https://bhakuparkharsohtun.github.io/ptools/taskpane.html"/>
   </DefaultSettings>
 
   <Permissions>ReadWriteDocument</Permissions>
