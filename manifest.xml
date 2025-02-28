@@ -25,5 +25,10 @@
     <SourceLocation DefaultValue="https://bhakuparkharsohtun.github.io/ptools/taskpane.html"/>
   </DefaultSettings>
 
+   <AppDomains>
+    <AppDomain>https://bhakuparkharsohtun.github.io</AppDomain>
+   </AppDomains>
+
+
   <Permissions>ReadWriteDocument</Permissions>
 </OfficeApp>
